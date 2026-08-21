@@ -1,0 +1,87 @@
+.venv
+uv.lock
+.python-version
+pyproject.toml
+# ==========================================
+# FastAPI & Python Core
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+# ==========================================
+# Virtual Environments
+# ==========================================
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+# ==========================================
+# Environment Variables & Secrets (CRITICAL)
+# ==========================================
+.env
+*.env
+.env.*
+!.env.example
+secrets.toml
+# ==========================================
+# IDEs and Editors
+# ==========================================
+.vscode/
+!.vscode/extensions.json
+*.code-workspace
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+# ==========================================
+# Testing & Code Quality
+# ==========================================
+.htmlcov/
+.coverage
+.coverage.*
+.coveragerc
+htmlcov/
+pytest_cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.black
+.cache/
+# ==========================================
+# Databases & Local Storage
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+data/
+uploads/
+storage/
+logs/
+*.log
+# ==========================================
+# Docker (Optional)
+# ==========================================
+.dockerignore
