@@ -52,9 +52,11 @@ Pytest
 
 # Contributors
 Yasmine, Muhamed, Basmala, Roaa, Menna
+
 Team Members (Inventory, Products, Orders, Monitoring)
 
- Notes
+# Notes
+ 
 Use an Admin JWT Token for product and inventory endpoints.
 
 Redis and monitoring dashboard run on 127.0.0.1:8000/dashboard
