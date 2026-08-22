@@ -1,3 +1,5 @@
+import json
+from core.cache import redis_client, clear_products_cache
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from typing import Optional
@@ -20,6 +22,11 @@ def get_products(
     skip: int = Query(0, ge=0),
     limit: int = Query(20, le=100),
 ):
+    cache_key = f"products:{search}:{category_id}:{min_price}:{max_price}:{skip}:{limit}"
+    cached = redis_client.get(cache_key)
+    if cached:
+        return json.loads(cached)
+
     query = db.query(Product)
 
     if search:
@@ -31,7 +38,12 @@ def get_products(
     if max_price is not None:
         query = query.filter(Product.price <= max_price)
 
-    return query.offset(skip).limit(limit).all()
+    result = query.offset(skip).limit(limit).all()
+
+    result_data = [ProductResponse.model_validate(p).model_dump(mode="json") for p in result]
+    redis_client.set(cache_key, json.dumps(result_data), ex=60)
+
+    return result
 
 @router.get("/{product_id}", response_model=ProductResponse)
 def get_product(product_id: int, db: Session = Depends(get_db)):
@@ -54,6 +66,7 @@ def create_product(
     db.add(new_product)
     db.commit()
     db.refresh(new_product)
+    clear_products_cache()
     return new_product
 
 @router.put("/{product_id}", response_model=ProductResponse)
@@ -78,6 +91,7 @@ def update_product(
         setattr(product, key, value)
     db.commit()
     db.refresh(product)
+    clear_products_cache()
     return product
 
 @router.delete("/{product_id}", status_code=204)
@@ -91,3 +105,4 @@ def delete_product(
         raise HTTPException(status_code=404, detail="Product not found")
     db.delete(product)
     db.commit()
+    clear_products_cache()
