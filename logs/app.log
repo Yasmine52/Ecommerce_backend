@@ -1,0 +1,220 @@
+2026-08-22 20:22:40.522 | INFO     | routers.auth:register:29 - New user registered: bob (role: customer)
+2026-08-22 20:22:40.522 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 370.82ms
+2026-08-22 20:22:40.933 | INFO     | routers.auth:register:29 - New user registered: bob (role: customer)
+2026-08-22 20:22:40.933 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 261.05ms
+2026-08-22 20:22:40.933 | WARNING  | routers.auth:register:18 - Registration failed: username or email already exists - bob
+2026-08-22 20:22:40.933 | INFO     | main:log_requests:32 - POST /auth/register | Status: 400 | Duration: 0.00ms
+2026-08-22 20:22:41.318 | INFO     | routers.auth:register:29 - New user registered: alice (role: customer)
+2026-08-22 20:22:41.318 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 249.62ms
+2026-08-22 20:22:41.333 | INFO     | routers.auth:login:34 - Login attempt: alice
+2026-08-22 20:22:41.688 | INFO     | routers.auth:login:54 - Login successful: alice (role: customer)
+2026-08-22 20:22:41.688 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 369.70ms
+2026-08-22 20:22:42.120 | INFO     | routers.auth:register:29 - New user registered: charlie (role: customer)
+2026-08-22 20:22:42.122 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 285.19ms
+2026-08-22 20:22:42.128 | INFO     | routers.auth:login:34 - Login attempt: charlie
+2026-08-22 20:22:42.395 | WARNING  | routers.auth:login:46 - Login failed: invalid password - charlie
+2026-08-22 20:22:42.395 | INFO     | main:log_requests:32 - POST /auth/login | Status: 401 | Duration: 270.70ms
+2026-08-22 20:22:42.518 | INFO     | routers.auth:login:34 - Login attempt: ghostuser
+2026-08-22 20:22:42.520 | WARNING  | routers.auth:login:38 - Login failed: user not found - ghostuser
+2026-08-22 20:22:42.521 | INFO     | main:log_requests:32 - POST /auth/login | Status: 401 | Duration: 8.63ms
+2026-08-22 20:22:42.630 | INFO     | main:log_requests:32 - POST /categories/ | Status: 401 | Duration: 2.61ms
+2026-08-22 20:22:42.988 | INFO     | routers.auth:register:29 - New user registered: dave (role: customer)
+2026-08-22 20:22:42.988 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 249.90ms
+2026-08-22 20:22:42.988 | INFO     | routers.auth:login:34 - Login attempt: dave
+2026-08-22 20:22:43.270 | INFO     | routers.auth:login:54 - Login successful: dave (role: customer)
+2026-08-22 20:22:43.270 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 281.91ms
+2026-08-22 20:22:43.280 | INFO     | main:log_requests:32 - POST /categories/ | Status: 403 | Duration: 2.01ms
+2026-08-22 20:22:43.692 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:43.693 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 287.13ms
+2026-08-22 20:22:43.711 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:43.989 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:43.989 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 287.80ms
+2026-08-22 20:22:44.069 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 80.02ms
+2026-08-22 20:22:44.464 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:44.464 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 276.61ms
+2026-08-22 20:22:44.482 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:44.794 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:44.794 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 321.90ms
+2026-08-22 20:22:44.821 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 19.48ms
+2026-08-22 20:22:45.219 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:45.219 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 272.33ms
+2026-08-22 20:22:45.243 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:45.536 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:45.536 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 299.31ms
+2026-08-22 20:22:45.570 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 33.52ms
+2026-08-22 20:22:45.570 | INFO     | main:log_requests:32 - GET /categories/ | Status: 200 | Duration: 0.00ms
+2026-08-22 20:22:46.023 | INFO     | routers.auth:register:29 - New user registered: frank (role: customer)
+2026-08-22 20:22:46.023 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 267.15ms
+2026-08-22 20:22:46.038 | INFO     | routers.auth:login:34 - Login attempt: frank
+2026-08-22 20:22:46.334 | INFO     | routers.auth:login:54 - Login successful: frank (role: customer)
+2026-08-22 20:22:46.337 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 297.67ms
+2026-08-22 20:22:46.338 | INFO     | main:log_requests:32 - POST /categories/ | Status: 403 | Duration: 0.00ms
+2026-08-22 20:22:46.750 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:46.750 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 289.32ms
+2026-08-22 20:22:46.787 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:47.110 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:47.110 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 331.67ms
+2026-08-22 20:22:47.134 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 17.70ms
+2026-08-22 20:22:47.141 | INFO     | main:log_requests:32 - GET /categories/1 | Status: 200 | Duration: 3.99ms
+2026-08-22 20:22:47.264 | INFO     | main:log_requests:32 - GET /categories/999 | Status: 404 | Duration: 2.58ms
+2026-08-22 20:22:47.659 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:47.661 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 284.71ms
+2026-08-22 20:22:47.676 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:47.932 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:47.932 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 263.17ms
+2026-08-22 20:22:47.949 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 17.38ms
+2026-08-22 20:22:47.968 | INFO     | main:log_requests:32 - PUT /categories/1 | Status: 200 | Duration: 14.56ms
+2026-08-22 20:22:48.374 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:48.382 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 290.81ms
+2026-08-22 20:22:48.396 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:48.681 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:48.681 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 290.35ms
+2026-08-22 20:22:48.701 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 19.67ms
+2026-08-22 20:22:48.732 | INFO     | main:log_requests:32 - DELETE /categories/1 | Status: 204 | Duration: 22.47ms
+2026-08-22 20:22:48.741 | INFO     | main:log_requests:32 - GET /categories/1 | Status: 404 | Duration: 0.00ms
+2026-08-22 20:22:49.291 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:49.291 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 403.60ms
+2026-08-22 20:22:49.310 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:49.614 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:49.630 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 328.38ms
+2026-08-22 20:22:49.652 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 22.04ms
+2026-08-22 20:22:49.961 | INFO     | routers.auth:register:29 - New user registered: grace (role: customer)
+2026-08-22 20:22:49.961 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 305.45ms
+2026-08-22 20:22:49.980 | INFO     | routers.auth:login:34 - Login attempt: grace
+2026-08-22 20:22:50.246 | INFO     | routers.auth:login:54 - Login successful: grace (role: customer)
+2026-08-22 20:22:50.246 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 284.54ms
+2026-08-22 20:22:50.246 | INFO     | main:log_requests:32 - DELETE /categories/1 | Status: 403 | Duration: 0.00ms
+2026-08-22 20:22:50.694 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:50.694 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 263.02ms
+2026-08-22 20:22:50.718 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:50.979 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:50.979 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 264.73ms
+2026-08-22 20:22:50.995 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 0.00ms
+2026-08-22 20:22:51.017 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 6.24ms
+2026-08-22 20:22:51.333 | INFO     | routers.auth:register:29 - New user registered: shopper (role: customer)
+2026-08-22 20:22:51.333 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 302.52ms
+2026-08-22 20:22:51.362 | INFO     | routers.auth:login:34 - Login attempt: shopper
+2026-08-22 20:22:51.633 | INFO     | routers.auth:login:54 - Login successful: shopper (role: customer)
+2026-08-22 20:22:51.633 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 300.31ms
+2026-08-22 20:22:51.651 | INFO     | main:log_requests:32 - POST /cart | Status: 400 | Duration: 15.62ms
+2026-08-22 20:22:52.065 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:52.080 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 299.72ms
+2026-08-22 20:22:52.080 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:52.370 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:52.370 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 289.31ms
+2026-08-22 20:22:52.396 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 25.99ms
+2026-08-22 20:22:52.423 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 23.34ms
+2026-08-22 20:22:52.701 | INFO     | routers.auth:register:29 - New user registered: shopper (role: customer)
+2026-08-22 20:22:52.701 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 278.76ms
+2026-08-22 20:22:52.701 | INFO     | routers.auth:login:34 - Login attempt: shopper
+2026-08-22 20:22:52.955 | INFO     | routers.auth:login:54 - Login successful: shopper (role: customer)
+2026-08-22 20:22:52.955 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 254.01ms
+2026-08-22 20:22:52.971 | INFO     | main:log_requests:32 - POST /cart | Status: 200 | Duration: 0.00ms
+2026-08-22 20:22:52.997 | INFO     | main:log_requests:32 - POST /orders | Status: 400 | Duration: 9.76ms
+2026-08-22 20:22:53.372 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:53.372 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 258.47ms
+2026-08-22 20:22:53.396 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:53.661 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:53.661 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 272.24ms
+2026-08-22 20:22:53.678 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 14.62ms
+2026-08-22 20:22:53.696 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 13.90ms
+2026-08-22 20:22:54.100 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:54.100 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 277.31ms
+2026-08-22 20:22:54.129 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:54.386 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:54.386 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 264.08ms
+2026-08-22 20:22:54.399 | INFO     | main:log_requests:32 - POST /products/ | Status: 404 | Duration: 13.54ms
+2026-08-22 20:22:54.843 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:54.846 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 283.75ms
+2026-08-22 20:22:54.862 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:55.109 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:55.109 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 262.95ms
+2026-08-22 20:22:55.130 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 20.59ms
+2026-08-22 20:22:55.400 | INFO     | routers.auth:register:29 - New user registered: henry (role: customer)
+2026-08-22 20:22:55.400 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 266.79ms
+2026-08-22 20:22:55.408 | INFO     | routers.auth:login:34 - Login attempt: henry
+2026-08-22 20:22:55.662 | INFO     | routers.auth:login:54 - Login successful: henry (role: customer)
+2026-08-22 20:22:55.662 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 253.52ms
+2026-08-22 20:22:55.670 | INFO     | main:log_requests:32 - POST /products/ | Status: 403 | Duration: 8.11ms
+2026-08-22 20:22:56.091 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:56.091 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 296.33ms
+2026-08-22 20:22:56.115 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:56.354 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:56.354 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 245.99ms
+2026-08-22 20:22:56.377 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 22.83ms
+2026-08-22 20:22:56.392 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 13.01ms
+2026-08-22 20:22:56.401 | INFO     | main:log_requests:32 - GET /products/ | Status: 200 | Duration: 5.37ms
+2026-08-22 20:22:56.777 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:56.794 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 275.81ms
+2026-08-22 20:22:56.794 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:57.039 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:57.039 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 245.32ms
+2026-08-22 20:22:57.055 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 0.00ms
+2026-08-22 20:22:57.078 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 7.96ms
+2026-08-22 20:22:57.078 | INFO     | main:log_requests:32 - GET /products/1 | Status: 200 | Duration: 0.00ms
+2026-08-22 20:22:57.295 | INFO     | main:log_requests:32 - GET /products/999 | Status: 404 | Duration: 5.01ms
+2026-08-22 20:22:57.659 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:57.659 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 254.21ms
+2026-08-22 20:22:57.677 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:57.919 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:57.919 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 249.94ms
+2026-08-22 20:22:57.944 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 25.21ms
+2026-08-22 20:22:57.963 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 19.51ms
+2026-08-22 20:22:57.982 | INFO     | main:log_requests:32 - PUT /products/1 | Status: 200 | Duration: 15.92ms
+2026-08-22 20:22:58.351 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:58.351 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 247.50ms
+2026-08-22 20:22:58.377 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:58.642 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:58.642 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 272.90ms
+2026-08-22 20:22:58.662 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 12.03ms
+2026-08-22 20:22:58.680 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 14.56ms
+2026-08-22 20:22:58.697 | INFO     | main:log_requests:32 - DELETE /products/1 | Status: 204 | Duration: 14.28ms
+2026-08-22 20:22:58.701 | INFO     | main:log_requests:32 - GET /products/1 | Status: 404 | Duration: 2.13ms
+2026-08-22 20:22:59.074 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:59.074 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 252.46ms
+2026-08-22 20:22:59.081 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:22:59.328 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:22:59.328 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 247.29ms
+2026-08-22 20:22:59.351 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 22.98ms
+2026-08-22 20:22:59.368 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 15.76ms
+2026-08-22 20:22:59.384 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 16.14ms
+2026-08-22 20:22:59.394 | INFO     | main:log_requests:32 - GET /products/ | Status: 200 | Duration: 9.93ms
+2026-08-22 20:22:59.765 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:22:59.765 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 248.33ms
+2026-08-22 20:22:59.786 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:23:00.047 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:23:00.047 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 271.81ms
+2026-08-22 20:23:00.071 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 23.94ms
+2026-08-22 20:23:00.084 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 13.48ms
+2026-08-22 20:23:00.093 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 6.65ms
+2026-08-22 20:23:00.093 | INFO     | main:log_requests:32 - GET /products/ | Status: 200 | Duration: 0.00ms
+2026-08-22 20:23:00.501 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:23:00.501 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 273.40ms
+2026-08-22 20:23:00.522 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:23:00.774 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:23:00.774 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 273.31ms
+2026-08-22 20:23:00.795 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 20.90ms
+2026-08-22 20:23:00.812 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 12.30ms
+2026-08-22 20:23:00.828 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 12.81ms
+2026-08-22 20:23:00.846 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 15.19ms
+2026-08-22 20:23:00.863 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 13.95ms
+2026-08-22 20:23:00.880 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 14.72ms
+2026-08-22 20:23:00.885 | INFO     | main:log_requests:32 - GET /products/ | Status: 200 | Duration: 3.57ms
+2026-08-22 20:23:00.893 | INFO     | main:log_requests:32 - GET /products/ | Status: 200 | Duration: 4.33ms
+2026-08-22 20:23:01.279 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:23:01.279 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 258.92ms
+2026-08-22 20:23:01.308 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:23:01.570 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:23:01.570 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 284.02ms
+2026-08-22 20:23:01.590 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 12.42ms
+2026-08-22 20:23:01.606 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 12.99ms
+2026-08-22 20:23:01.611 | INFO     | main:log_requests:32 - GET /products/ | Status: 200 | Duration: 1.08ms
+2026-08-22 20:23:02.051 | INFO     | routers.auth:register:29 - New user registered: adminuser (role: customer)
+2026-08-22 20:23:02.051 | INFO     | main:log_requests:32 - POST /auth/register | Status: 201 | Duration: 268.35ms
+2026-08-22 20:23:02.073 | INFO     | routers.auth:login:34 - Login attempt: adminuser
+2026-08-22 20:23:02.320 | INFO     | routers.auth:login:54 - Login successful: adminuser (role: admin)
+2026-08-22 20:23:02.320 | INFO     | main:log_requests:32 - POST /auth/login | Status: 200 | Duration: 269.25ms
+2026-08-22 20:23:02.343 | INFO     | main:log_requests:32 - POST /categories/ | Status: 201 | Duration: 23.04ms
+2026-08-22 20:23:02.361 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 17.18ms
+2026-08-22 20:23:02.365 | INFO     | main:log_requests:32 - GET /products/ | Status: 200 | Duration: 2.13ms
+2026-08-22 20:23:02.375 | INFO     | main:log_requests:32 - POST /products/ | Status: 201 | Duration: 6.11ms
