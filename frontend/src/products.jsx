@@ -31,26 +31,27 @@ function Products() {
   };
 
   return (
-    <div style={{ maxWidth: "800px", margin: "40px auto", fontFamily: "sans-serif" }}>
-      <h2>Products</h2>
-      {message && <p style={{ color: "green" }}>{message}</p>}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "16px" }}>
-        {products.map((product) => (
-          <div
-            key={product.id}
-            style={{ border: "1px solid #ccc", borderRadius: "8px", padding: "16px" }}
-          >
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p><strong>${product.price}</strong></p>
-            <p>Stock: {product.stock}</p>
-            <button onClick={() => addToCart(product.id)} style={{ padding: "8px 16px" }}>
-              Add to Cart
-            </button>
-          </div>
-        ))}
-      </div>
-      {products.length === 0 && <p>No products found.</p>}
+    <div className="page-container">
+      <h2 className="page-title">Products</h2>
+      {message && <p className="success-text">{message}</p>}
+
+      {products.length === 0 ? (
+        <p className="empty-state">No products found.</p>
+      ) : (
+        <div className="grid">
+          {products.map((product) => (
+            <div key={product.id} className="card">
+              <div className="product-name">{product.name}</div>
+              <div className="product-desc">{product.description}</div>
+              <div className="product-price">${product.price}</div>
+              <div className="product-stock">Stock: {product.stock}</div>
+              <button onClick={() => addToCart(product.id)} className="btn">
+                Add to Cart
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

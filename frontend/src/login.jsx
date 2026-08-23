@@ -28,29 +28,25 @@ function Login() {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "80px auto", fontFamily: "sans-serif" }}>
-      <h2>Login</h2>
+    <div className="auth-card">
+      <h2 className="auth-title">Welcome Back</h2>
       <form onSubmit={handleLogin}>
-        <div style={{ marginBottom: "12px" }}>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            style={{ width: "100%", padding: "8px" }}
-          />
-        </div>
-        <div style={{ marginBottom: "12px" }}>
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            style={{ width: "100%", padding: "8px" }}
-          />
-        </div>
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        <button type="submit" style={{ width: "100%", padding: "10px" }}>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="input"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="input"
+        />
+        {error && <p className="error-text">{error}</p>}
+        <button type="submit" className="btn">
           Login
         </button>
       </form>

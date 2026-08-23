@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
+﻿import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import Login from "./Login";
 import Products from "./Products";
 import Cart from "./Cart";
@@ -21,9 +21,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <nav style={{ padding: "16px", borderBottom: "1px solid #ccc", fontFamily: "sans-serif" }}>
-        <Link to="/products" style={{ marginRight: "16px" }}>Products</Link>
-        <Link to="/cart" style={{ marginRight: "16px" }}>Cart</Link>
+      <nav>
+        <span className="brand">ShopEase</span>
+        <Link to="/products">Products</Link>
+        <Link to="/cart">Cart</Link>
         {loggedIn ? (
           <button onClick={handleLogout}>Logout</button>
         ) : (

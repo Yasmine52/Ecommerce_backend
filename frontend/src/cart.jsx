@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import api from "./api";
 
 function Cart() {
@@ -38,32 +38,25 @@ function Cart() {
   };
 
   return (
-    <div style={{ maxWidth: "600px", margin: "40px auto", fontFamily: "sans-serif" }}>
-      <h2>Your Cart</h2>
-      {message && <p style={{ color: message.includes("success") ? "green" : "red" }}>{message}</p>}
+    <div className="page-container">
+      <h2 className="page-title">Your Cart</h2>
+      {message && <p className="success-text">{message}</p>}
 
       {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p className="empty-state">Your cart is empty.</p>
       ) : (
         <>
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            {cartItems.map((item) => (
-              <li
-                key={item.id}
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  borderBottom: "1px solid #eee",
-                  padding: "10px 0",
-                }}
-              >
-                <span>Product #{item.product_id} — Qty: {item.quantity}</span>
-                <button onClick={() => removeItem(item.id)}>Remove</button>
-              </li>
-            ))}
-          </ul>
-          <button onClick={placeOrder} style={{ marginTop: "16px", padding: "10px 20px" }}>
+          {cartItems.map((item) => (
+            <div key={item.id} className="cart-item">
+              <span className="cart-item-info">
+                Product #{item.product_id} — Qty: {item.quantity}
+              </span>
+              <button onClick={() => removeItem(item.id)} className="remove-btn">
+                Remove
+              </button>
+            </div>
+          ))}
+          <button onClick={placeOrder} className="btn" style={{ marginTop: "16px" }}>
             Place Order
           </button>
         </>
